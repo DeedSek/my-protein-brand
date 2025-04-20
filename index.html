@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltFuel Labs - Fuel Your Ambition</title> <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Apply Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #e5e7eb; /* Light gray text */
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation Classes */
+        .reveal {
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #34d399, #60a5fa); /* Example gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        /* Style product/merch grids */
+        .grid-container {
+            display: grid;
+            gap: 1.5rem; /* 24px */
+        }
+
+        @media (min-width: 640px) { /* sm */
+            .grid-container-products { grid-template-columns: repeat(2, 1fr); }
+            .grid-container-merch { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .grid-container-products { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #1f2937; /* Slightly lighter dark */
+            border-radius: 0.75rem; /* 12px */
+            padding: 1.5rem; /* 24px */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden; /* Ensure content stays within rounded corners */
+            border: 1px solid #374151; /* Subtle border */
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1; /* Make images square */
+            object-fit: contain; /* Fit image within container */
+            margin-bottom: 1rem;
+            border-radius: 0.5rem; /* Rounded corners for images inside card */
+        }
+
+        /* Section Padding */
+        section {
+            padding: 4rem 1rem; /* More vertical padding */
+        }
+        @media (min-width: 768px) { /* md */
+            section {
+                padding: 6rem 2rem;
+            }
+        }
+
+        /* Navigation Styling */
+         nav a {
+            transition: color 0.3s ease;
+         }
+         nav a:hover {
+            color: #34d399; /* Highlight color on hover */
+         }
+
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md shadow-md reveal">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="image0.png" alt="VoltFuel Labs Logo" class="h-10 w-auto"> <span class="text-xl font-bold text-white">VoltFuel Labs</span> </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#products" class="text-gray-300 hover:text-emerald-400">Products</a>
+                <a href="#merchandise" class="text-gray-300 hover:text-emerald-400">Merch</a>
+                <a href="#about" class="text-gray-300 hover:text-emerald-400">Our Story</a>
+                <a href="#nutrition" class="text-gray-300 hover:text-emerald-400">Nutrition</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <div class="h-20"></div> <section id="hero" class="text-center reveal">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+                Fuel Your <span class="gradient-text">Ambition</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                Engineered in Romania. Premium protein powders designed by an electromechanical mind for peak performance and incredible taste.
+            </p>
+            <div class="max-w-4xl mx-auto mb-8 shadow-xl rounded-lg overflow-hidden">
+                 <img src="image11.png" alt="Athlete preparing VoltFuel Labs protein shake" class="w-full h-auto"> </div>
+             <a href="#products" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Explore Flavors
+            </a>
+        </div>
+    </section>
+
+    <section id="products" class="bg-gray-800 reveal">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Electrifying Flavors</h2>
+            <div class="grid-container grid-container-products">
+                <div class="card text-center reveal">
+                    <img src="image1.png" alt="White Venom - Vanilla & Pistachio Protein Powder">
+                    <h3 class="text-xl font-semibold mb-2">White Venom</h3>
+                    <p class="text-gray-400">Vanilla & Pistachio</p>
+                </div>
+                <div class="card text-center reveal" style="transition-delay: 0.1s;">
+                    <img src="image2.png" alt="Ashen Byte - Cinnamon & Hazelnut Protein Powder">
+                    <h3 class="text-xl font-semibold mb-2">Ashen Byte</h3>
+                    <p class="text-gray-400">Cinnamon & Hazelnut</p>
+                </div>
+                <div class="card text-center reveal" style="transition-delay: 0.2s;">
+                    <img src="image3.png" alt="Red Override - Cherry & Berry Protein Powder">
+                    <h3 class="text-xl font-semibold mb-2">Red Override</h3>
+                    <p class="text-gray-400">Cherry & Berry</p>
+                </div>
+                <div class="card text-center reveal" style="transition-delay: 0.3s;">
+                    <img src="image4.png" alt="Golden Glitch - Banana & Apple Protein Powder">
+                    <h3 class="text-xl font-semibold mb-2">Golden Glitch</h3>
+                    <p class="text-gray-400">Banana & Apple</p>
+                </div>
+                <div class="card text-center reveal" style="transition-delay: 0.4s;">
+                    <img src="image5.png" alt="Code Squeeze - Orange & Strawberry Protein Powder">
+                    <h3 class="text-xl font-semibold mb-2">Code Squeeze</h3>
+                    <p class="text-gray-400">Orange & Strawberry</p>
+                </div>
+                 <div class="card text-center reveal flex flex-col items-center justify-center border-dashed border-gray-600" style="transition-delay: 0.5s;">
+                     <svg class="w-16 h-16 text-gray-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.24a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806.547a2 2 0 001.806-.547l.318-.158a6 6 0 013.86-.517l.318.158a6 6 0 003.86.517l2.387-.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86l-2.387-.477zM12 18a3 3 0 100-6 3 3 0 000 6z"></path></svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-500">More Coming Soon</h3>
+                    <p class="text-gray-500">New innovations brewing!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="merchandise" class="reveal">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Wear The Drive</h2>
+            <div class="grid-container grid-container-merch">
+                <div class="card text-center reveal">
+                    <img src="image7.png" alt="White Hoodie - Build & Grow Together">
+                    <h3 class="text-xl font-semibold">Build & Grow Together</h3>
+                </div>
+                <div class="card text-center reveal" style="transition-delay: 0.1s;">
+                    <img src="image8.png" alt="Green Hoodie - Resilience > Strength">
+                    <h3 class="text-xl font-semibold">Resilience > Strength</h3>
+                </div>
+                <div class="card text-center reveal" style="transition-delay: 0.2s;">
+                    <img src="image9.png" alt="Red Hoodie - Heart & Soul">
+                    <h3 class="text-xl font-semibold">Heart & Soul</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-gray-800 reveal">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div class="md:w-1/2 reveal">
+                <img src="image10.png" alt="Our Story - VoltFuel Labs" class="rounded-lg shadow-xl w-full h-auto"> </div>
+            <div class="md:w-1/2 reveal" style="transition-delay: 0.1s;">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">Engineered From Scratch</h2>
+                <p class="text-lg text-gray-400 mb-4 leading-relaxed">
+                    It started in Ploiesti, Romania. As a 21-year-old electromechanical engineering student, I was fueled by workouts but frustrated by the protein options available – chalky textures, artificial tastes, and questionable ingredients. Money was tight, but the idea was electric: what if I engineered my own?
+                </p>
+                <p class="text-lg text-gray-400 mb-4 leading-relaxed">
+                    Applying engineering principles to nutrition, I spent countless nights researching, sourcing premium ingredients, and meticulously formulating blends in my small student apartment. It wasn't easy. There were failed batches, moments of doubt, and the constant challenge of balancing studies with this growing passion.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    But the drive to create something genuinely better, something I'd be proud to use myself, kept me going. VoltFuel Labs isn't just about protein; it's about the relentless pursuit of optimization, building something impactful from an idea, and sharing that energy with you. It's fuel, engineered with heart and soul.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nutrition" class="reveal">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">Transparency You Can Trust</h2>
+            <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
+                We believe in complete transparency. Know exactly what fuels your body.
+            </p>
+            <div class="max-w-3xl mx-auto bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700 reveal">
+                 <img src="image12.png" alt="VoltFuel Labs Nutrition Facts Table" class="w-full h-auto rounded"> </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 border-t border-gray-700 pt-12 pb-8 reveal">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <img src="image6.png" alt="VoltFuel Labs Round Logo - Healthiest Protein Powder Claim" class="h-20 w-auto mx-auto mb-6"> <p class="mb-4">VoltFuel Labs</p> <p class="text-sm">&copy; <span id="current-year"></span> VoltFuel Labs. Engineered in Ploiesti, Romania. All Rights Reserved.</p> </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for reveal animations
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: Unobserve after revealing to save resources
+                    // observer.unobserve(entry.target);
+                }
+                // Optional: Remove 'visible' class if element scrolls out of view
+                // else {
+                //     entry.target.classList.remove('visible');
+                // }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        reveals.forEach(reveal => {
+            observer.observe(reveal);
+        });
+
+        // Update footer year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Basic Mobile Menu Toggle (Example - Adapt as needed)
+        // const menuButton = document.querySelector('.md\\:hidden'); // Selects the mobile menu button
+        // const navLinks = document.querySelector('.hidden.md\\:flex'); // Selects the desktop nav links container
+        // if (menuButton && navLinks) {
+        //     menuButton.addEventListener('click', () => {
+        //         // This is a very basic toggle, you might need a more robust solution
+        //         // depending on how you structure your mobile menu HTML
+        //         navLinks.classList.toggle('hidden'); // Toggles the 'hidden' class
+        //         navLinks.classList.toggle('flex'); // Might need to toggle 'flex' or other display properties
+        //         navLinks.classList.toggle('flex-col'); // Add if mobile menu is vertical
+        //         navLinks.classList.toggle('absolute'); // Position it
+        //         navLinks.classList.toggle('top-16'); // Position below header
+        //         navLinks.classList.toggle('left-0');
+        //         navLinks.classList.toggle('right-0');
+        //         navLinks.classList.toggle('bg-gray-800'); // Background for mobile menu
+        //         navLinks.classList.toggle('p-4'); // Padding for mobile menu
+        //     });
+        // }
+
+    </script>
+
+</body>
+</html>
